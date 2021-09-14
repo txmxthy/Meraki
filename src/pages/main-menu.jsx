@@ -1,8 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native'
 
-export default function HomePage(){
+export default function MainMenu(){
     return (
-        <Text>"MAIN MENU"</Text>
-    )
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>Main Menu!</Text>
+        </View>
+      );
 }
