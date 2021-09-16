@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "meraki-app",
-    "slug": "meraki-app",
+    "name": "meraki",
+    "slug": "meraki",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
