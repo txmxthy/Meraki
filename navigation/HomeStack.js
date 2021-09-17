@@ -4,20 +4,21 @@ import HomeScreen from "../screens/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import RadarScreen from "../screens/Radar";
-import MatrixScreen from "../screens/Matrix";
-import CalendarScreen from "../screens/Calendar";
-import GlobalScreen from "../screens/Global";
-import OverdueScreen from "../screens/Overdue";
+import RadarScreen from "../screens/RadarScreen";
+import MatrixScreen from "../screens/MatrixScreen";
+import CalendarScreen from "../screens/CalendarScreen";
+import GlobalScreen from "../screens/GlobalScreen";
+import OverdueScreen from "../screens/OverdueScreen";
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
-function Views() {
+function ViewScreens() {
   return (
-    <Tab.Navigator
+    <Tab.Navigator headerMode="none"
       screenOptions={({ route }) => ({
+        headerShown: false,
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
@@ -83,7 +84,7 @@ export default function HomeStack() {
   return (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Views" component={Views} />
+      <Stack.Screen name="Views" component={ViewScreens} />
     </Stack.Navigator>
   );
 }

@@ -33,19 +33,19 @@ export default function HomeScreen({ route, navigation }) {
       <Text style={styles.text}>Your UID is: {user.uid} </Text>
       <Button 
         title="Radar" 
-        onPress={() => navigation.navigate("Views", { screen: 'Radar'})} />
+        onPress={() => navigation.navigate("ViewScreens", { screen: 'Radar'})} />
       <Button 
         title="Matrix" 
-        onPress={() => navigation.navigate("Views", { screen: 'Matrix'})} />
+        onPress={() => navigation.navigate("ViewScreens", { screen: 'Matrix'})} />
       <Button 
-        title="Calendar" 
-        onPress={() => navigation.navigate("Views", { screen: 'Calendar'})} />
+        title="Calendars" 
+        onPress={() => navigation.navigate("ViewScreens", { screen: 'Calendar'})} />
       <Button 
         title="Global" 
-        onPress={() => navigation.navigate("Views", { screen: 'Global'})} />
+        onPress={() => navigation.navigate("ViewScreens", { screen: 'Global'})} />
       <Button 
         title="Overdue" 
-        onPress={() => navigation.navigate("Views", { screen: 'Overdue'})} />
+        onPress={() => navigation.navigate("ViewScreens", { screen: 'Overdue'})} />
     </View>
   );
 }
@@ -53,7 +53,7 @@ export default function HomeScreen({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e93b81",
+    backgroundColor: "#d9d2d5",
     paddingTop: 50,
     paddingHorizontal: 12,
   },
