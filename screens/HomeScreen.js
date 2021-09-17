@@ -31,11 +31,21 @@ export default function HomeScreen({ route, navigation }) {
         />
       </View>
       <Text style={styles.text}>Your UID is: {user.uid} </Text>
-      <IconButton 
-        name="logout"
-        size={24}
-        color="#fff"
-        onPress={() => navigation.navigate("Views")} />
+      <Button 
+        title="Radar" 
+        onPress={() => navigation.navigate("Views", { screen: 'Radar'})} />
+      <Button 
+        title="Matrix" 
+        onPress={() => navigation.navigate("Views", { screen: 'Matrix'})} />
+      <Button 
+        title="Calendar" 
+        onPress={() => navigation.navigate("Views", { screen: 'Calendar'})} />
+      <Button 
+        title="Global" 
+        onPress={() => navigation.navigate("Views", { screen: 'Global'})} />
+      <Button 
+        title="Overdue" 
+        onPress={() => navigation.navigate("Views", { screen: 'Overdue'})} />
     </View>
   );
 }
