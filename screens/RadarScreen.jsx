@@ -4,9 +4,9 @@ import { VictoryBar, VictoryChart, VictoryTheme, VictoryGroup, VictoryArea, Vict
 
 
 const characterData = [
-  { strength: 1, intelligence: 250, luck: 1, stealth: 40, charisma: 50 },
-  { strength: 2, intelligence: 300, luck: 2, stealth: 80, charisma: 90 },
-  { strength: 5, intelligence: 225, luck: 3, stealth: 60, charisma: 120 }
+  { strength: 1, intelligence: 250, luck: 1, stealth: 40, charisma: 50, autism: 40, largeness: 50 },
+  { strength: 2, intelligence: 300, luck: 2, stealth: 80, charisma: 90 , autism: 35, largeness: 54 },
+  { strength: 5, intelligence: 225, luck: 3, stealth: 60, charisma: 120, autism: 40, largeness: 52 }
 ];
 
 export default class RadarScreen extends React.Component {
@@ -49,7 +49,7 @@ export default class RadarScreen extends React.Component {
           style={{ data: { fillOpacity: 0.2, strokeWidth: 2 } }}
         >
           {this.state.data.map((data, i) => {
-            return <VictoryArea key={i} data={data}/>;
+            return <VictoryArea key={i} data={data} interpolation="cardinal" />;
           })}
         </VictoryGroup>
       {
