@@ -84,7 +84,7 @@ export default function HomeStack() {
   return (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Views" component={ViewScreens} />
+      <Stack.Screen name="ViewScreens" component={ViewScreens} />
     </Stack.Navigator>
   );
 }
