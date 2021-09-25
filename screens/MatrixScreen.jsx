@@ -20,7 +20,9 @@ export default function MatrixScreen({ route, navigation }) {
             backgroundColor="#a3be8c"
             titleColor="#fff"
             onPress={() =>
-              navigation.navigate("ViewScreens", { screen: "Matrix" })
+              navigation.navigate("Todo/Edit", {
+                defaults: { urgent: true, important: true },
+              })
             }
           />
           <Button
@@ -29,7 +31,9 @@ export default function MatrixScreen({ route, navigation }) {
             backgroundColor="#81a1c1"
             titleColor="#fff"
             onPress={() =>
-              navigation.navigate("ViewScreens", { screen: "Matrix" })
+              navigation.navigate("Todo/Edit", {
+                defaults: { urgent: true, important: false },
+              })
             }
           />
         </View>
@@ -47,7 +51,9 @@ export default function MatrixScreen({ route, navigation }) {
             backgroundColor="#d08770"
             titleColor="#fff"
             onPress={() =>
-              navigation.navigate("ViewScreens", { screen: "Matrix" })
+              navigation.navigate("Todo/Edit", {
+                defaults: { urgent: false, important: true },
+              })
             }
           />
           <Button
@@ -56,7 +62,9 @@ export default function MatrixScreen({ route, navigation }) {
             backgroundColor="#bf616a"
             titleColor="#fff"
             onPress={() =>
-              navigation.navigate("ViewScreens", { screen: "Matrix" })
+              navigation.navigate("Todo/Edit", {
+                defaults: { urgent: false, important: false },
+              })
             }
           />
         </View>

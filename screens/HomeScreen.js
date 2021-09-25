@@ -1,6 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useContext } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 
 import { IconButton } from "../components";
 import Firebase from "../config/firebase";
@@ -20,7 +19,7 @@ export default function HomeScreen({ route, navigation }) {
   };
   return (
     <View style={styles.container}>
-      <StatusBar style="dark-content" />
+      <StatusBar style="dark" />
       <View style={styles.row}>
         <Text style={styles.title}>Welcome {user.email}!</Text>
         <IconButton
@@ -31,21 +30,30 @@ export default function HomeScreen({ route, navigation }) {
         />
       </View>
       <Text style={styles.text}>Your UID is: {user.uid} </Text>
-      <Button 
-        title="Radar" 
-        onPress={() => navigation.navigate("ViewScreens", { screen: 'Radar'})} />
-      <Button 
-        title="Matrix" 
-        onPress={() => navigation.navigate("ViewScreens", { screen: 'Matrix'})} />
-      <Button 
-        title="Calendars" 
-        onPress={() => navigation.navigate("ViewScreens", { screen: 'Calendar'})} />
-      <Button 
-        title="Global" 
-        onPress={() => navigation.navigate("ViewScreens", { screen: 'Global'})} />
-      <Button 
-        title="Overdue" 
-        onPress={() => navigation.navigate("ViewScreens", { screen: 'Overdue'})} />
+      <Button
+        title="Radar"
+        onPress={() => navigation.navigate("ViewScreens", { screen: "Radar" })}
+      />
+      <Button
+        title="Matrix"
+        onPress={() => navigation.navigate("ViewScreens", { screen: "Matrix" })}
+      />
+      <Button
+        title="Calendars"
+        onPress={() =>
+          navigation.navigate("ViewScreens", { screen: "Calendar" })
+        }
+      />
+      <Button
+        title="Global"
+        onPress={() => navigation.navigate("ViewScreens", { screen: "Global" })}
+      />
+      <Button
+        title="Overdue"
+        onPress={() =>
+          navigation.navigate("ViewScreens", { screen: "Overdue" })
+        }
+      />
     </View>
   );
 }
