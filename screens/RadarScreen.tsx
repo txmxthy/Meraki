@@ -70,7 +70,7 @@ export default function RadarScreen({ navigation }) {
             domain={{ y: [0, 1] }}
           >
             <VictoryGroup
-              colorScale={["transparent", "gold"]}
+              colorScale={["transparent", "#88c0d0"]}
               style={{ data: { fillOpacity: 0.2, strokeWidth: 2 } }}
             >
               {data.map((data, i) => {

@@ -24,15 +24,17 @@ export default function GlobaScreen({
       getTodoList(user.uid).then((todos) => {
         setOverdueCount(todoCountOverdue(todos));
         setTodos(
-          todos.sort(
-            (a, b) =>
-              new Date(a.dueDate).valueOf() - new Date(b.dueDate).valueOf()
-          )
+          todos
+            .filter((val) => val.progress < 1)
+            .sort(
+              (a, b) =>
+                new Date(a.dueDate).valueOf() - new Date(b.dueDate).valueOf()
+            )
         );
       });
     }
 
-    // prompt an update when we focus this screen again
+    // Prompt an update when we focus this screen again
     const unsubFocus = navigation.addListener("focus", () => {
       setTodos(undefined);
     });

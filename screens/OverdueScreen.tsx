@@ -1,6 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Text, View } from "react-native";
-import { getTodoList, todoCountOverdue, TodoItem } from "../models/Todo";
+import {
+  getTodoList,
+  todoCountOverdue,
+  todoIsOverdue,
+  TodoItem,
+} from "../models/Todo";
 import { AuthenticatedUserContext } from "../navigation/AuthenticatedUserProvider";
 import Firebase from "../config/firebase";
 import type firebase from "firebase";
@@ -25,7 +30,7 @@ export default function OverdueScreen({
         setOverdueCount(todoCountOverdue(todos));
         setTodos(
           todos
-            .filter((val) => new Date(val.dueDate) < new Date())
+            .filter(todoIsOverdue)
             .sort(
               (a, b) =>
                 new Date(a.dueDate).valueOf() - new Date(b.dueDate).valueOf()
@@ -34,7 +39,7 @@ export default function OverdueScreen({
       });
     }
 
-    // prompt an update when we focus this screen again
+    // Promt an update when the screen is refocused.
     const unsubFocus = navigation.addListener("focus", () => {
       setTodos(undefined);
     });

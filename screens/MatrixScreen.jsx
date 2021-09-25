@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import Button from "../components/Button";
 
 export default function MatrixScreen({ route, navigation }) {
+  // Ghetto Grid
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <View>

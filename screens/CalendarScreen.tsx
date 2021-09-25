@@ -21,7 +21,7 @@ export default function CalendarScreen({ navigation }) {
       });
     }
 
-    // prompt an update when we focus this screen again
+    // Prompt an update when we focus this screen again
     const unsubFocus = navigation.addListener("focus", () => {
       setTodos(undefined);
     });

@@ -11,6 +11,7 @@ import GlobalScreen from "../screens/GlobalScreen";
 import OverdueScreen from "../screens/OverdueScreen";
 import EditScreen from "./../screens/EditScreen";
 import { OverdueItemsContext } from "./../context/OverdueItemsContext";
+import * as LocalAuthentication from "expo-local-authentication";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +40,6 @@ function ViewScreens() {
             iconName = focused ? "clock" : "clock-outline";
           }
 
-          // You can return any component that you like here!
           return (
             <MaterialCommunityIcons name={iconName} size={size} color={color} />
           );

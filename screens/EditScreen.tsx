@@ -128,10 +128,10 @@ export default function EditScreen({ navigation, route }: EditScreenProps) {
 
   const onDelete = useCallback(async () => {
     if (params.todo) {
-      // AND HIS NAME IS 💪 JOHN CENA 💪! (dun, dahn, dun, duuuun..., dahn, dun, dun, dun)
+      // AND HIS NAME IS JOHN CENA
       Alert.alert(
         "Are you sure about that?",
-        "This will PERMANENTLY remove this todo item. There's no way in hell you can recover it.",
+        "This will PERMANENTLY remove this todo item.",
         [
           {
             text: "Delete",

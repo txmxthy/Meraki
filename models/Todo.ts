@@ -119,7 +119,7 @@ export async function deleteTodo(
 }
 
 export function todoIsOverdue(todo: TodoItem) {
-  return new Date(todo.dueDate) < new Date();
+  return new Date(todo.dueDate) < new Date() && todo.progress < 1;
 }
 
 export const todoCountOverdue = (todos: TodoItem[]) =>
