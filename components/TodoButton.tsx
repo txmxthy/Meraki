@@ -6,11 +6,12 @@ import { categoryIcons } from "../models/Categories";
 
 export interface TodoButtonProps {
   todo: TodoItem;
+  onPress: () => void;
 }
 
-export function TodoButton({ todo }: TodoButtonProps) {
+export function TodoButton({ todo, onPress }: TodoButtonProps) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
         <View style={styles.icon}>{categoryIcons[todo.category]}</View>
         <View style={styles.name}>
@@ -25,12 +26,12 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#4c566a",
     borderRadius: 24,
-    borderWidth: 1,
     padding: 8,
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
+    margin: 4,
   },
   icon: {
     display: "flex",
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     width: 48,
     height: 48,
-    marginRight: 8,
+    marginRight: 16,
   },
   name: {},
   nameText: {

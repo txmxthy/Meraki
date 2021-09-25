@@ -9,7 +9,7 @@ import { NavigationProp } from "@react-navigation/core";
 import { ScrollView } from "react-native-gesture-handler";
 import { OverdueItemsContext } from "../context/OverdueItemsContext";
 
-export default function GlobaScreen({
+export default function OverdueScreen({
   navigation,
 }: {
   navigation: NavigationProp<any>;
@@ -24,10 +24,12 @@ export default function GlobaScreen({
       getTodoList(user.uid).then((todos) => {
         setOverdueCount(todoCountOverdue(todos));
         setTodos(
-          todos.sort(
-            (a, b) =>
-              new Date(a.dueDate).valueOf() - new Date(b.dueDate).valueOf()
-          )
+          todos
+            .filter((val) => new Date(val.dueDate) < new Date())
+            .sort(
+              (a, b) =>
+                new Date(a.dueDate).valueOf() - new Date(b.dueDate).valueOf()
+            )
         );
       });
     }

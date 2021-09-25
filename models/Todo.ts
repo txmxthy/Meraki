@@ -21,7 +21,7 @@ export interface TodoItem {
   description?: string;
   weight: number;
   category: TodoCategory;
-  dueDate: Date;
+  dueDate: string;
 }
 
 export async function newTodo(
@@ -32,9 +32,31 @@ export async function newTodo(
   progress: number,
   description: string,
   weight: number,
-  category: TodoCategory
-) {
-  throw new Error("TODO");
+  category: TodoCategory,
+  dueDate: string
+): Promise<TodoItem> {
+  const doc = await db.collection(`user/${userId}/todo`).add({
+    category,
+    description,
+    dueDate,
+    important,
+    name,
+    progress,
+    urgent,
+    weight,
+  });
+
+  return {
+    id: doc.id,
+    category,
+    description,
+    dueDate,
+    important,
+    name,
+    progress,
+    urgent,
+    weight,
+  };
 }
 
 //
@@ -49,7 +71,7 @@ function deserializeTodo(id: string, data: any): TodoItem {
     description: data["description"] as string,
     weight: data["weight"] as number,
     category: data["category"] as TodoCategory,
-    dueDate: data["dueDate"] as Date,
+    dueDate: data["dueDate"] as string,
   };
 }
 
@@ -88,3 +110,17 @@ export async function syncTodo(
     dueDate,
   });
 }
+
+export async function deleteTodo(
+  userId: string,
+  todo: TodoItem
+): Promise<void> {
+  await db.doc(`/user/${userId}/todo/${todo.id}`).delete();
+}
+
+export function todoIsOverdue(todo: TodoItem) {
+  return new Date(todo.dueDate) < new Date();
+}
+
+export const todoCountOverdue = (todos: TodoItem[]) =>
+  todos.reduce((acc, val) => acc + (todoIsOverdue(val) ? 1 : 0), 0);

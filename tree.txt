@@ -1,0 +1,45 @@
+.
+├── App.js
+├── app.config.js
+├── assets
+│   ├── adaptive-icon.png
+│   ├── favicon.png
+│   ├── icon.png
+│   └── splash.png
+├── babel.config.js
+├── components
+│   ├── Button.js
+│   ├── ErrorMessage.js
+│   ├── IconButton.js
+│   ├── InputField.js
+│   ├── PillButton.jsx
+│   ├── TodoButton.tsx
+│   └── index.js
+├── config
+│   └── firebase.ts
+├── models
+│   ├── Categories.tsx
+│   └── Todo.ts
+├── navigation
+│   ├── AuthStack.js
+│   ├── AuthenticatedUserProvider.js
+│   ├── HomeStack.js
+│   ├── RootNavigator.js
+│   └── index.js
+├── package-lock.json
+├── package.json
+├── screens
+│   ├── CalendarScreen.jsx
+│   ├── EditScreen.tsx
+│   ├── GlobalScreen.tsx
+│   ├── HomeScreen.js
+│   ├── LoginScreen.js
+│   ├── MatrixScreen.jsx
+│   ├── OverdueScreen.jsx
+│   ├── RadarScreen.jsx
+│   └── SignupScreen.js
+├── tree.txt
+├── tsconfig.json
+└── yarn.lock
+
+6 directories, 36 files

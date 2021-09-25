@@ -29,30 +29,34 @@ export default function HomeScreen({ route, navigation }) {
           onPress={handleSignOut}
         />
       </View>
-      <Text style={styles.text}>Your UID is: {user.uid} </Text>
       <Button
         title="Radar"
         onPress={() => navigation.navigate("ViewScreens", { screen: "Radar" })}
+        containerStyle={{ marginBottom: 8 }}
       />
       <Button
         title="Matrix"
         onPress={() => navigation.navigate("ViewScreens", { screen: "Matrix" })}
+        containerStyle={{ marginBottom: 8 }}
       />
       <Button
         title="Calendars"
         onPress={() =>
           navigation.navigate("ViewScreens", { screen: "Calendar" })
         }
+        containerStyle={{ marginBottom: 8 }}
       />
       <Button
         title="Global"
         onPress={() => navigation.navigate("ViewScreens", { screen: "Global" })}
+        containerStyle={{ marginBottom: 8 }}
       />
       <Button
         title="Overdue"
         onPress={() =>
           navigation.navigate("ViewScreens", { screen: "Overdue" })
         }
+        containerStyle={{ marginBottom: 8 }}
       />
     </View>
   );
@@ -61,7 +65,7 @@ export default function HomeScreen({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#d9d2d5",
+    backgroundColor: "#2e3440",
     paddingTop: 50,
     paddingHorizontal: 12,
   },

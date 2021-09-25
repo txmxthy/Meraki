@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -10,12 +10,15 @@ import CalendarScreen from "../screens/CalendarScreen";
 import GlobalScreen from "../screens/GlobalScreen";
 import OverdueScreen from "../screens/OverdueScreen";
 import EditScreen from "./../screens/EditScreen";
+import { OverdueItemsContext } from "./../context/OverdueItemsContext";
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
 function ViewScreens() {
+  const [overdueCount] = useContext(OverdueItemsContext);
+
   return (
     <Tab.Navigator
       headerMode="none"
@@ -45,42 +48,30 @@ function ViewScreens() {
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tab.Screen
-        name="Radar"
-        component={RadarScreen}
-        options={{ tabBarBadge: 3 }}
-      />
-      <Tab.Screen
-        name="Matrix"
-        component={MatrixScreen}
-        options={{ tabBarBadge: 3 }}
-      />
-      <Tab.Screen
-        name="Calendar"
-        component={CalendarScreen}
-        options={{ tabBarBadge: 3 }}
-      />
-      <Tab.Screen
-        name="Global"
-        component={GlobalScreen}
-        options={{ tabBarBadge: 3 }}
-      />
+      <Tab.Screen name="Radar" component={RadarScreen} />
+      <Tab.Screen name="Matrix" component={MatrixScreen} />
+      <Tab.Screen name="Calendar" component={CalendarScreen} />
+      <Tab.Screen name="Global" component={GlobalScreen} />
       <Tab.Screen
         name="Overdue"
         component={OverdueScreen}
-        options={{ tabBarBadge: 3 }}
+        options={{ tabBarBadge: overdueCount == 0 ? undefined : overdueCount }}
       />
     </Tab.Navigator>
   );
 }
 
 export default function HomeStack() {
-  return (
-    <Stack.Navigator headerMode="none">
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="ViewScreens" component={ViewScreens} />
+  const overdueCountState = useState(0);
 
-      <Stack.Screen name="Todo/Edit" component={EditScreen} />
-    </Stack.Navigator>
+  return (
+    <OverdueItemsContext.Provider value={overdueCountState}>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="ViewScreens" component={ViewScreens} />
+
+        <Stack.Screen name="Todo/Edit" component={EditScreen} />
+      </Stack.Navigator>
+    </OverdueItemsContext.Provider>
   );
 }
