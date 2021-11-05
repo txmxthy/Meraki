@@ -30,6 +30,7 @@
 
 ## About
 This project is home to meraki, a todo list that tracks your progress across different areas of your life.  
+This was my first time using javascript, typescript, react-native and expo. This was a 72 hour project hackathon.
 
 ### Key Features
 - Add todo items in different life categories
