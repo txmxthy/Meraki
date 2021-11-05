@@ -36,9 +36,21 @@ This project is home to meraki, a todo list that tracks your progress across dif
 - Track your life balance
 - Visualize your todo items in a calendar or date
 
+## Overview
+![Architecture](https://github.com/txmxthy/meraki/blob/master/assets/images%20(4).png)
+
 ## Demo
+### Prioritization Matrix (Eisenhower Matrix)
+![Matrix](https://github.com/txmxthy/meraki/blob/master/assets/images%20(1).png)
 
+### Calendar Interaction 
+![Calendar](https://github.com/txmxthy/meraki/blob/master/assets/images%20(2).png)
 
+### Rich Todo Item Creation
+![Creation](https://github.com/txmxthy/meraki/blob/master/assets/images%20(3).png)
+
+### Life Overview
+![Overview](https://github.com/txmxthy/meraki/blob/master/assets/images%20(5).png)
   
 ## Contributing
 
