@@ -41,17 +41,11 @@ This was my first time using javascript, typescript, react-native and expo. This
 ![Architecture](https://github.com/txmxthy/meraki/blob/master/assets/images%20(4).png)
 
 ## Demo
-### Prioritization Matrix (Eisenhower Matrix)
-![Matrix](https://github.com/txmxthy/meraki/blob/master/assets/images%20(1).png)
+Prioritization Matrix (Eisenhower Matrix) | Calendar Interaction | Life Overview| Rich Todo Item Creation
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![Matrix](https://github.com/txmxthy/meraki/blob/master/assets/images%20(1).png)  | ![Calendar](https://github.com/txmxthy/meraki/blob/master/assets/images%20(2).png) |  ![Overview](https://github.com/txmxthy/meraki/blob/master/assets/images%20(5).png) | ![Creation](https://github.com/txmxthy/meraki/blob/master/assets/images%20(3).png) 
 
-### Calendar Interaction 
-![Calendar](https://github.com/txmxthy/meraki/blob/master/assets/images%20(2).png)
 
-### Rich Todo Item Creation
-![Creation](https://github.com/txmxthy/meraki/blob/master/assets/images%20(3).png)
-
-### Life Overview
-![Overview](https://github.com/txmxthy/meraki/blob/master/assets/images%20(5).png)
   
 ## Contributing
 
