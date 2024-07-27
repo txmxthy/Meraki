@@ -29,30 +29,30 @@
 
 
 ## About
-This project is home to meraki, a todo list that tracks your progress across different areas of your life.  
-This was my first time using javascript, typescript, react-native and expo. This was a 72 hour project hackathon.
+
+Welcome to **Meraki**—a dynamic to-do list application that helps you manage and track your progress across various life areas. Built during a 72-hour hackathon, Meraki was my first project with JavaScript, TypeScript, React Native, and Expo.
 
 ### Key Features
-- Add todo items in different life categories
-- Track your life balance
-- Visualize your todo items in a calendar or date
+
+- **Eisenhower Matrix (Prioritization Matrix):** Prioritize tasks based on urgency and importance, helping you focus on what truly matters.
+- **Radar Chart:** Gain insights into different life areas with a visual representation of your task distribution.
+- **Spider Chart:** Explore an intuitive view of your goals and progress across multiple dimensions.
+- **Life Area Tracking:** Monitor your balance across various life categories, ensuring holistic personal growth.
+- **Rich Todo Item Creation:** Add and categorize tasks with rich details and track them effectively.
+- **Calendar Integration:** View and manage your tasks on a calendar or by date, ensuring you stay organized.
 
 ## Overview
-![Architecture](https://github.com/txmxthy/meraki/blob/master/assets/images%20(4).png)
 
-## Demo
-Prioritization Matrix (Eisenhower Matrix) | Calendar Interaction | Life Overview| Rich Todo Item Creation
+
+<p align="center">
+  <img src="https://github.com/txmxthy/meraki/blob/master/assets/images%20(4).png" alt="Architecture" width="600"/>
+  <br><i>Architecture</i>
+</p>
+
+## Media
+Prioritization Matrix (Eisenhower Matrix) | Calendar Interaction | Life Overview | Rich Todo Item Creation
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![Matrix](https://github.com/txmxthy/meraki/blob/master/assets/images%20(1).png)  | ![Calendar](https://github.com/txmxthy/meraki/blob/master/assets/images%20(2).png) |  ![Overview](https://github.com/txmxthy/meraki/blob/master/assets/images%20(5).png) | ![Creation](https://github.com/txmxthy/meraki/blob/master/assets/images%20(3).png) 
+<img src="https://github.com/txmxthy/meraki/blob/master/assets/images%20(1).png" height="500" style="max-height: 500px; width: auto;"/> | <img src="https://github.com/txmxthy/meraki/blob/master/assets/images%20(2).png" height="500" style="max-height: 500px; width: auto;"/> | <img src="https://github.com/txmxthy/meraki/blob/master/assets/images%20(5).png" height="500" style="max-height: 500px; width: auto;"/> | <img src="https://github.com/txmxthy/meraki/blob/master/assets/images%20(3).png" height="500" style="max-height: 500px; width: auto;"/>
 
-
-  
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
 
   
